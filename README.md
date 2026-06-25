@@ -35,32 +35,18 @@ Aplikasi demo pemesanan tiket bioskop online berbasis **Laravel 12** dengan tema
 ## 🔧 Instalasi
 
 ```bash
-# Clone
 git clone https://github.com/VeeNevire/cinetix-demo.git
 cd cinetix-demo
 
-# Install dependencies
 composer install
-npm install
+npm install && npm run build
 
-# Environment
 cp .env.example .env
-# Edit .env: atur DB_DATABASE=db_cinetix_demo, DB_USERNAME=root, DB_PASSWORD=
+# Edit .env: sesuaikan DB_DATABASE, DB_USERNAME, DB_PASSWORD
 
-# Generate key
-php artisan key:generate
-
-# Migrate & seed
-php artisan migrate
-php artisan db:seed
-
-# Storage link
+php artisan migrate --seed
 php artisan storage:link
 
-# Build assets
-npm run build
-
-# Run
 php artisan serve
 ```
 
