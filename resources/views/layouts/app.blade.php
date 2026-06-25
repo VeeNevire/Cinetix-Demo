@@ -64,11 +64,11 @@
         </div>
     </nav>
 
-    <div class="demo-banner">
+    <div class="demo-banner relative z-40 mt-16">
         <i class="bi bi-info-circle me-1"></i> DEMO MODE — Simulasi pembayaran dan tiket untuk demonstrasi. Tidak ada transaksi nyata.
     </div>
 
-    <main class="pt-20">
+    <main class="pt-0">
         {{ $slot }}
     </main>
 
