@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-cinema-900 text-gray-200 font-sans;
+    }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+        @apply bg-cinema-900;
+    }
+    ::-webkit-scrollbar-thumb {
+        @apply bg-cinema-500 rounded-full;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-cinema-accent;
+    }
+}
+
+@layer components {
+    .btn-primary {
+        @apply bg-cinema-accent hover:bg-cinema-accent-light text-white font-semibold py-2.5 px-6 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-cinema-accent/30;
+    }
+
+    .btn-secondary {
+        @apply bg-cinema-600 hover:bg-cinema-500 text-white font-medium py-2.5 px-6 rounded-full transition-all duration-300;
+    }
+
+    .btn-gold {
+        @apply bg-cinema-gold hover:bg-yellow-400 text-cinema-900 font-bold py-3 px-8 rounded-full transition-all duration-300;
+    }
+
+    .card-movie {
+        @apply bg-cinema-800 rounded-2xl overflow-hidden shadow-xl border border-cinema-600/30 hover:border-cinema-accent/40 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-cinema-accent/20;
+    }
+
+    .card-movie .card-img {
+        @apply w-full h-72 object-cover transition-transform duration-500;
+    }
+
+    .card-movie:hover .card-img {
+        @apply scale-105;
+    }
+
+    .glass {
+        @apply bg-cinema-800/80 backdrop-blur-md border border-cinema-600/30;
+    }
+
+    .input-field {
+        @apply w-full bg-cinema-800 border border-cinema-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:border-cinema-accent focus:ring-1 focus:ring-cinema-accent outline-none transition;
+    }
+
+    .badge-age {
+        @apply inline-block px-3 py-1 rounded-full text-xs font-semibold;
+    }
+
+    .seat-available {
+        @apply border border-cinema-500 bg-cinema-800 hover:bg-cinema-accent hover:border-cinema-accent text-gray-400 hover:text-white;
+    }
+
+    .seat-selected {
+        @apply bg-cinema-accent border-cinema-accent text-white;
+    }
+
+    .seat-occupied {
+        @apply bg-red-600/40 border-red-600/60 text-red-300 cursor-not-allowed;
+    }
+
+    .demo-banner {
+        @apply bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-500 text-cinema-900 text-center text-xs font-bold py-1.5 px-4 tracking-wider;
+    }
+}
